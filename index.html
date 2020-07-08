@@ -18,7 +18,7 @@
     </div><br>
     <form>
       <div class="form-group">
-        <label class="label-description" for="solvvy_bypass">Do you want to send customer to the Help Center or Contact Page?</label><br>
+        <label class="label-description" for="solvvy_bypass">Do you want to send customer to the Help Center or Contact Page?<span class="required">&#42;</span></label><br>
         <div class="radio-group">
           <input type="radio" id="help-center-radio" name="base-url">
           <label for="help-center-radio">Help Center</label>
@@ -35,7 +35,7 @@
         <small id="tag_info" class="form-text text-muted">Tags will be applied if customer submits a Zendesk ticket.</small><br>
       </div>
 
-      <label class="label-description" for="solvvy_bypass">Do you want to bypass Solvvy?</label><br>
+      <label class="label-description" for="solvvy_bypass">Do you want to bypass Solvvy?</label><span class="required">&#42;</span><br>
       <div class="radio-group">
         <input type="radio" id="solvvy_bypass_yes" name="solvvy_bypass">
         <label for="solvvy_bypass_yes">Yes</label>
@@ -47,14 +47,14 @@
       <small id="bypass_info_no" class="form-text text-muted hidden">Customer will be see Solvvy search field.</small><br>
 
 
-      <label class="label-description" for="auto_open">Do you want Solvvy to open automatically?</label><br>
+      <label class="label-description" for="auto_open">Do you want Solvvy to open automatically?</label><span class="required">&#42;</span><br>
       <div class="radio-group">
         <input type="radio" id="auto_open_yes" name="auto_open">
         <label for="auto_open_yes">Yes</label>
         <input type="radio" id="auto_open_no" name="auto_open">
         <label for="auto_open_no">No</label>
       </div>
-    
+
 
       <span id="auto-open-error" class="error-text hidden">Required</span>
       <small id="auto_open_info_yes" class="form-text text-muted hidden">Solvvy will open automatically when the page loads.</small>
