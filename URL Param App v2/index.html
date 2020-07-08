@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="tagsinput.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <img src="scribd_logo.png">
+  <div id="body-container">
+    <div id="header">
+      Solvvy URL Generator
+    </div>
+    <div id="sub-header">
+      Use this tool to create custom URLs that you can use to send to customers.
+    </div><br>
+    <form>
+      <div class="form-group">
+        <label class="label-description" for="solvvy_bypass">Do you want to send customer to the Help Center or Contact Page?</label><br>
+        <div class="radio-group">
+          <input type="radio" id="help-center-radio" name="base-url">
+          <label for="help-center-radio">Help Center</label>
+          <input type="radio" id="contact-page-radio" name="base-url">
+          <label for="contact-page-radio">Contact Page</label>
+        </div>
+        <span id="base-url-error" class="error-text hidden">Required</span>
+        <small id="base-url-hc" class="form-text text-muted hidden">Customer will be sent to Help Center</small>
+        <small id="base-url-contact" class="form-text text-muted hidden">Customer will be sent to Contact page</small><br>
+        <label class="label-description" for="customer_email">Customer Email</label>
+        <input id="email" type="email" class="form-control"><br>
+        <label class="label-description" for="tag">Tags</label>
+        <input placeholder="Press &#11152; to seperate tags" id="tag-input" type="text" class="form-control" data-role="tagsinput">
+        <small id="tag_info" class="form-text text-muted">Tags will be applied if customer submits a Zendesk ticket.</small><br>
+      </div>
+
+      <label class="label-description" for="solvvy_bypass">Do you want to bypass Solvvy?</label><br>
+      <div class="radio-group">
+        <input type="radio" id="solvvy_bypass_yes" name="solvvy_bypass">
+        <label for="solvvy_bypass_yes">Yes</label>
+        <input type="radio" id="solvvy_bypass_no" name="solvvy_bypass">
+        <label for="solvvy_bypass_no">No</label>
+      </div>
+      <span id="bypass-error" class="error-text hidden">Required</span>
+      <small id="bypass_info_yes" class="form-text text-muted hidden">Customer will be sent directly to ticket form.</small>
+      <small id="bypass_info_no" class="form-text text-muted hidden">Customer will be see Solvvy search field.</small><br>
+      <label class="label-description" for="auto_open">Do you want Solvvy to open automatically?</label><br>
+      <div class="radio-group">
+        <input type="radio" id="auto_open_yes" name="auto_open">
+        <label for="auto_open_yes">Yes</label>
+        <input type="radio" id="auto_open_no" name="auto_open">
+        <label for="auto_open_no">No</label>
+      </div>
+      <span id="auto-open-error" class="error-text hidden">Required</span>
+      <small id="auto_open_info_yes" class="form-text text-muted hidden">Solvvy will open automatically when the page loads.</small>
+      <small id="auto_open_info_no" class="form-text text-muted hidden">Solvvy will open when the cusotmer clicks the modal.</small>
+      <br><br>
+      <button id="generate-button" type="button" class="btn btn-primary">Generate URL</button>
+      <br><br>
+      <div id="generated-URL-box" class="input-group mb-3 hidden">
+        <input id="url-text" type="text" class="form-control" disabled aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button onclick="copyURL()" type="button" id="copy-button" class="btn btn-outline-secondary">Copy URL</button>
+        </div>
+      </div>
+      <small class="hidden" id="copy-success">The link has been copied to your clipboard. &#10004;</small>
+    </form>
+  </div>
+
+
+
+
+
+
+  <!-- Begin scripts -->
+
+  <script src = "https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity = "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin = "anonymous" >
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="tagsinput.js"></script>
+  <script src="script.js"></script>
+
+  <!-- End Scripts -->
+
+</body></html>

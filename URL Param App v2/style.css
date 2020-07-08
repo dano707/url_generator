@@ -1,0 +1,153 @@
+body{
+  font-family: Source Sans Pro,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #00293F !important;
+}
+
+img{
+  margin: 50px auto 0 auto !important;
+  display: block;
+  width: 200px;
+}
+
+#header{
+  font-size: 28px !important;
+  font-weight: bold !important;
+  margin: 16px auto 0 !important;
+}
+
+
+#body-container{
+  padding: 20px;
+  width: 800px;
+  border: 1px solid black;
+  margin: 20px auto;
+  font-family: Source Sans Pro, sans-serif !important;
+  background-color: #f3f6fd;
+  border-radius: 5px;
+
+
+}
+
+.label-description{
+  font-weight: bold;
+  color: #1c263d;
+}
+
+/* Begin button primary */
+button.btn.btn-primary{
+  background-color: #3C8380 !important;
+  border: 0px !important;
+  width: 279px;
+  height: 49px;
+  text-align: center;
+  font-size: 18px !important;
+  border-radius: 5px !important;
+}
+
+button.btn.btn-primary:hover{
+  background-color: #0C6069 !important;
+}
+/* End button primary */
+
+input{
+  /* border: 1px solid #8f929e !important; */
+  height: 39px !important;
+  width: 279px !important;
+  border-radius: 5px;
+}
+
+/* Tag input */
+.bootstrap-tagsinput .badge{
+  margin: 5px !important;
+  font-size: 15px;
+  line-height: 15px;
+
+}
+
+
+
+/* <!-- Begin Toggle switch --> */
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.radio-group label {
+  color: #0C6069;
+  display: inline-block;
+  cursor: pointer;
+  width: 137px;
+  text-align: center;
+  margin: 0;
+
+
+}
+
+input[type=radio]:checked + label {
+  color: white;
+  background: #3C8380;
+  outline: 5px solid #3C8380;
+  border: 0;
+}
+
+label + input[type=radio] + label {
+  border-left: solid 1px #8f929e;
+}
+
+.radio-group {
+  border: solid 1px #8f929e;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 39px;
+  line-height: 39px;
+}
+/* <!-- end toggle switch --> */
+
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.badge-info{
+  background: #3C8380 !important;
+}
+
+input:focus{
+  /* border: 2px solid green !important; */
+
+}
+#placeholder-text{
+  display: inline-block;
+  position: absolute;
+  margin: -35px 0 0 250px;
+}
+
+
+
+.error-text{
+  font-weight: bold;
+  color: red;
+  margin-left: 15px;
+}
+
+
+#copy-button{
+  border: 1px solid #3C8380;
+  color: #3C8380;
+  font-weight: bold;
+}
+#copy-button:hover{
+  background-color: #3C8380;
+  color: white;
+}
+#copy-success{
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+}
